@@ -1,0 +1,56 @@
+/**
+ * mq: a helper for styling responsive pages.
+ *
+ * @file mq.css
+ * @author Sean Monahan <sean@seanmonahan.org>
+ */
+
+#mq {
+  font-family: sans-serif;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  min-height: 30px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#mq > span {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+#mq > span span:first-child {
+  font-weight: bold;
+}
+
+@media all and (min-width:1px) {
+  .mq-test {
+    position:absolute
+  }
+}
+
+@media only screen and (max-width:310px) {
+  #mq > span span:first-child {
+    display: block;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  #mq > span {
+    display: block;
+  }
+}
+
+@media only screen and (min-width:541px) {
+  #mq > span {
+    display: inline;
+  }
+}
