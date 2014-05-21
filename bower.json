@@ -1,0 +1,22 @@
+{
+  "name": "mq.js",
+  "main": "mq.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/NoobsArePeople2/mq.js",
+  "authors": [
+    "Sean Monahan <sean@seanmonahan.org>"
+  ],
+  "description": "A helper for styling responsive pages.",
+  "keywords": [
+    "media",
+    "query"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
