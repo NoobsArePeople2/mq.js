@@ -6,8 +6,7 @@
  * @version 0.1.0
  */
 
-var my = '#mq-media:after{content:"default"}@media only screen and (min-width:320px){#mq-media:after{content:"min-width: 320px"}}@media only screen and (min-width:460px){#mq-media:after{content:"min-width: 460px"}}@media only screen and (min-width:768px){#mq-media:after{content:"min-width: 768px"}}';
-
+// User CSS as an object.
 var my = [
 
   { query: '', content: 'default' },
@@ -17,7 +16,10 @@ var my = [
 
 ];
 
-(function(user_queries) {
+// User CSS. Minified for ease of embedding.
+var my_styles = '#mq-media:after{content:"default"}@media only screen and (min-width:320px){#mq-media:after{content:"min-width: 320px"}}@media only screen and (min-width:460px){#mq-media:after{content:"min-width: 460px"}}@media only screen and (min-width:768px){#mq-media:after{content:"min-width: 768px"}}';
+
+(function(user_css) {
 
 // Minified mq.js for ease of adding.
 var mq_styles = '#mq{font-family:sans-serif;background:#000;background:rgba(0,0,0,.5);color:#fff;'
@@ -120,8 +122,8 @@ function onLoad() {
     body.appendChild(q);
 
     injectStyles(mq_styles);
-    if (typeof user_queries !== 'undefined') {
-      addUserQueries(user_queries);
+    if (typeof user_css !== 'undefined') {
+      addUserQueries(user_css);
     }
 
     if (browserSupportsMediaQueries()) {
@@ -187,4 +189,4 @@ function onResize() {
 ///////////////////////////////////////////////////////////
 attachEvent(window, 'load', onLoad);
 
-}(my));
+}(my_styles));

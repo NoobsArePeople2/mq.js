@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <title>mq.js Demo</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="../res/example.css" rel="stylesheet">
+    <script src="mq.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var hidden = document.body.querySelectorAll('.hidden')[0];
+            if (hidden) {
+                hidden.className = '';
+            }
+
+            var loading = document.getElementById('loading');
+            if (loading) {
+                loading.className = 'hidden';
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="loading">
+
+        <p>Loading up some images...hang tight!</p>
+
+    </div>
+
+    <div class="hidden">
+        <header>
+            <h1>mq.js Demo</h2>
+
+            <h2>This demo passes an object into mq.js to define user styles.</h2>
+
+            <p>mq.js is fixed to the bottom of this page. It displays the currently applied media query and window size.</p>
+            <p>Resize the window to see the values update.</p>
+            <p><b>Note:</b> this demo works best in a desktop browser.</p>
+
+        </header>
+
+        <div id="wrapper">
+            <div id="demo">
+                <img id="one" src="https://dl.dropboxusercontent.com/u/63411579/seanmonahan.org/labs/mqjs/demo/01.jpg">
+                <img id="two" src="https://dl.dropboxusercontent.com/u/63411579/seanmonahan.org/labs/mqjs/demo/02.jpg">
+                <img id="three" src="https://dl.dropboxusercontent.com/u/63411579/seanmonahan.org/labs/mqjs/demo/03.jpg">
+            </div>
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

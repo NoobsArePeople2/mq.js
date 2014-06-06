@@ -1,0 +1,25 @@
+/* ========================================================
+ * Media Queries
+ * ========================================================
+ */
+#mq-media:after {
+  content: "default";
+}
+
+@media only screen and (min-width:320px) {
+  #mq-media:after {
+    content: "min-width: 320px";
+  }
+}
+
+@media only screen and (min-width:460px) {
+  #mq-media:after {
+    content: "min-width: 460px";
+  }
+}
+
+@media only screen and (min-width:768px) {
+  #mq-media:after {
+    content: "min-width: 768px";
+  }
+}
